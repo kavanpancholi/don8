@@ -57,8 +57,7 @@ class don8Settings {
 						           value="<?php if ( is_email( $email ) ) {
 							           echo $email;
 						           } elseif ( empty( $email ) ) {
-						           	   global $current_user;get_currentuserinfo();
-						           	   echo $current_user->user_email;
+						           	   echo bloginfo('admin_email');
 						           } else {
 							           echo 'Not a valid email';
 						           } ?>" required /></td>
