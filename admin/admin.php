@@ -66,17 +66,17 @@ class don8Settings {
 					<tr valign="top">
 						<th scope="row"><label for="don8_cause">Cause</label></th>
 						<td><input type="text" id="don8_cause" name="don8_cause"
-						           value="<?php echo get_option( 'don8_cause' ); ?>"/></td>
+						           value="<?php echo get_option( 'don8_cause' ); ?>" required /></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><label for="don8_currency">Currency Code</label></th>
 						<td><input type="text" id="don8_currency" name="don8_currency"
-						           value="<?php echo $currency; ?>"/></td>
+						           value="<?php echo $currency; ?>" required /></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><label for="don8_value">Amount</label></th>
 						<td><input type="number" id="don8_value" name="don8_value"
-						           value="<?php echo get_option( 'don8_value' ); ?>"/></td>
+						           value="<?php echo get_option( 'don8_value' ); ?>" required /></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><label for="don8_button">Button image</label></th>
