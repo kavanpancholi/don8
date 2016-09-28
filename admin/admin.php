@@ -53,13 +53,15 @@ class don8Settings {
 				<table class="form-table">
 					<tr valign="top">
 						<th scope="row"><label for="don8_paypal_email">Paypal e-mail</label></th>
-						<td><input type="text" id="don8_paypal_email" name="don8_paypal_email"
+						<td><input type="email" id="don8_paypal_email" name="don8_paypal_email"
 						           value="<?php if ( is_email( $email ) ) {
 							           echo $email;
 						           } elseif ( empty( $email ) ) {
+						           	   global $current_user;get_currentuserinfo();
+						           	   echo $current_user->user_email;
 						           } else {
 							           echo 'Not a valid email';
-						           } ?>"/></td>
+						           } ?>" required /></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><label for="don8_cause">Cause</label></th>
@@ -73,7 +75,7 @@ class don8Settings {
 					</tr>
 					<tr valign="top">
 						<th scope="row"><label for="don8_value">Amount</label></th>
-						<td><input type="text" id="don8_value" name="don8_value"
+						<td><input type="number" id="don8_value" name="don8_value"
 						           value="<?php echo get_option( 'don8_value' ); ?>"/></td>
 					</tr>
 					<tr valign="top">
